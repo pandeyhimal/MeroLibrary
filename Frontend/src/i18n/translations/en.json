@@ -1,0 +1,329 @@
+{
+  "common": {
+    "welcome": "Welcome to Mero Library",
+    "language": "Language",
+    "english": "English",
+    "nepali": "Nepali",
+    "all": "All",
+    "book": "Book",
+    "author": "Author",
+    "price": "Price",
+    "rating": "Rating",
+    "description": "Description",
+    "pages": "Pages",
+    "publisher": "Publisher",
+    "publishYear": "Publish Year",
+    "stock": "Stock",
+    "available": "books available",
+    "buyNow": "Buy Now",
+    "close": "Close",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Submit",
+    "required": "Required",
+    "invalidEmail": "Please enter a valid email address",
+    "invalidPhone": "Please enter a valid phone number",
+    "thankYou": "Thank you!",
+    "error": "Error occurred. Please try again."
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "items": "items",
+    "addToCart": "Add to Cart",
+    "remove": "Remove",
+    "clearAll": "Clear All",
+    "quantity": "Quantity",
+    "rental": "Rental",
+    "purchase": "Purchase",
+    "rentalPeriod": "Rental Period",
+    "days": "days",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "free": "Free",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "processing": "Processing...",
+    "secureCheckout": "Secure checkout powered by SSL",
+    "empty": {
+      "title": "Your cart is empty",
+      "description": "Looks like you haven't added any books to your cart yet.",
+      "browseBooks": "Browse Books"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "books": "Books",
+    "authors": "Authors",
+    "blogs": "Blogs",
+    "about": "About",
+    "contact": "Contact",
+    "donations": "Donations"
+  },
+  "home": {
+    "title": "Welcome to Our Library",
+    "description": "Discover a world of knowledge through our vast collection of books",
+    "searchPlaceholder": "Search books or authors...",
+    "browseButton": "Browse Collection"
+  },
+  "books": {
+    "mostSold": "Most Sold Nepali Books",
+    "categories": {
+      "literature": "Nepali Literature",
+      "novel": "Novels",
+      "drama": "Drama",
+      "philosophy": "Philosophy",
+      "history": "History",
+      "biography": "Biography",
+      "poetry": "Poetry",
+      "shortStories": "Short Stories",
+      "children": "Children's Literature",
+      "travel": "Travel",
+      "religious": "Religious Literature",
+      "educational": "Educational Books",
+      "health": "Health & Medicine",
+      "agriculture": "Agriculture & Environment",
+      "business": "Business & Economics",
+      "technology": "Computer & Technology"
+    },
+    "details": {
+      "author": "Author",
+      "description": "Description",
+      "language": "Language",
+      "pages": "Pages",
+      "publisher": "Publisher",
+      "publishYear": "Publish Year",
+      "isbn": "ISBN",
+      "stock": "Stock",
+      "reviews": "Reviews"
+    }
+  },
+  "writers": {
+    "title": "Nepali Writers",
+    "description": "Introduction to writers who have made significant contributions to Nepali literature. Here you can learn about the biographies, works, and contributions of famous Nepali poets, playwrights, novelists, and other writers.",
+    "searchPlaceholder": "Search by writer's name or biography...",
+    "filterByCategory": "Filter by Category",
+    "filterByAlphabet": "Filter by Alphabet",
+    "writersFound": "{{count}} writers found",
+    "noWritersFound": "No writers found",
+    "categories": {
+      "classical": {
+        "name": "Classical Writers",
+        "description": "Writers who contributed to classical Nepali literature",
+        "displayName": "Classical Writers"
+      },
+      "modern": {
+        "name": "Modern Writers",
+        "description": "Contemporary writers shaping modern Nepali literature",
+        "displayName": "Modern Writers"
+      },
+      "poets": {
+        "name": "Poets",
+        "description": "Writers known for their poetic contributions",
+        "displayName": "Poets"
+      },
+      "essayists": {
+        "name": "Essayists",
+        "description": "Writers known for their essays and prose",
+        "displayName": "Essayists"
+      },
+      "female": {
+        "name": "Female Writers",
+        "description": "Women writers who have enriched Nepali literature",
+        "displayName": "Female Writers"
+      }
+    },
+    "details": {
+      "biography": "Biography",
+      "birthDate": "Birth Date",
+      "deathDate": "Death Date",
+      "birthPlace": "Birth Place",
+      "education": "Education",
+      "notableWorks": "Notable Works",
+      "awards": "Awards",
+      "genres": "Genres",
+      "close": "Close"
+    }
+  },
+  "donations": {
+    "heroTitle": "Support the Development of Nepali Literature",
+    "heroSubtitle": "Your contribution helps preserve and promote our rich literary heritage",
+    "whyDonate": "Why Donate?",
+    "whyDonateDesc": "Your donations help us maintain and expand our digital library, making Nepali literature accessible to readers worldwide.",
+    "donationForm": {
+      "title": "Make a Donation",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "amount": "Donation Amount (NPR)",
+      "paymentMethod": "Payment Method",
+      "khalti": "Khalti",
+      "esewa": "eSewa",
+      "donateNow": "Donate Now",
+      "processing": "Processing...",
+      "successMessage": "Thank you! Your donation has been received successfully.",
+      "errorMessage": "An error occurred during donation. Please try again."
+    },
+    "contactForm": {
+      "title": "Contact Us",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "sendMessage": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Thank you! Your message has been sent successfully. We will contact you soon.",
+      "errorMessage": "Could not send message. Please try again."
+    },
+    "benefits": {
+      "title": "How Your Donation Helps",
+      "preservation": "Preservation",
+      "preservationDesc": "Digitize and preserve rare Nepali books",
+      "accessibility": "Accessibility",
+      "accessibilityDesc": "Make literature accessible to everyone",
+      "education": "Education",
+      "educationDesc": "Support educational programs and workshops",
+      "community": "Community",
+      "communityDesc": "Build a stronger literary community"
+    }
+  },
+  "blogs": {
+    "title": "Blogs",
+    "description": "Read in-depth articles and analysis about Nepali literature, culture, and society",
+    "searchPlaceholder": "Search blogs...",
+    "categories": {
+      "all": "All",
+      "literature": "Literature",
+      "poetry": "Poetry",
+      "novel": "Novel",
+      "drama": "Drama",
+      "story": "Story",
+      "children": "Children's Literature",
+      "technology": "Technology"
+    },
+    "filters": {
+      "all": "All Blogs",
+      "latest": "Latest Blogs",
+      "featured": "Featured Blogs",
+      "popular": "Popular Blogs",
+      "trending": "Trending Blogs"
+    },
+    "sort": {
+      "latest": "Newest to Oldest",
+      "oldest": "Oldest to Newest",
+      "popular": "By Popularity",
+      "views": "By Views",
+      "likes": "By Likes"
+    },
+    "labels": {
+      "categories": "Categories",
+      "filters": "Filters",
+      "sortBy": "Sort By",
+      "search": "Search",
+      "resultsFound": "results found",
+      "minRead": "min read",
+      "noResults": "No blogs found",
+      "noResultsDesc": "No blog posts match your search criteria. Please try a different search or category.",
+      "readMore": "Read More"
+    },
+    "samplePosts": {
+      "goldenAge": {
+        "title": "The Golden Age of Nepali Literature",
+        "excerpt": "Exploring the renaissance period of Nepali literature and its lasting impact on modern writing."
+      },
+      "modernPoetry": {
+        "title": "Modern Poetry in Nepal",
+        "excerpt": "Contemporary Nepali poetry and its evolution in the digital age."
+      },
+      "novelTradition": {
+        "title": "The Novel Tradition in Nepal",
+        "excerpt": "A comprehensive look at the development of novel writing in Nepali literature."
+      },
+      "dramaHistory": {
+        "title": "History of Nepali Drama",
+        "excerpt": "From traditional folk dramas to modern theatrical productions in Nepal."
+      },
+      "womenWriters": {
+        "title": "Women Writers in Nepali Literature",
+        "excerpt": "Celebrating the contributions of female authors to Nepali literary tradition."
+      },
+      "digitalLiterature": {
+        "title": "Digital Literature and Nepali Writing",
+        "excerpt": "How technology is transforming the way we read and write Nepali literature."
+      },
+      "contemporaryStories": {
+        "title": "Contemporary Nepali Short Stories",
+        "excerpt": "Modern short story writing and its significance in today's literary landscape."
+      },
+      "childrenLiterature": {
+        "title": "Children's Literature in Nepal",
+        "excerpt": "The importance of children's books in preserving Nepali culture and language."
+      }
+    },
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "author": "Author",
+    "category": "Category",
+    "tags": "Tags",
+    "relatedPosts": "Related Posts",
+    "shareThis": "Share this post",
+    "comments": "Comments",
+    "leaveComment": "Leave a comment",
+    "commentForm": {
+      "name": "Name",
+      "email": "Email",
+      "comment": "Comment",
+      "submit": "Submit Comment"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Welcome to Mero Library",
+      "subtitle": "Nepal's Premier Digital Library Platform",
+      "description": "Discover the rich heritage of Nepali literature through our extensive collection of books, authors, and literary content. Join thousands of readers worldwide in exploring the beauty of Nepali culture and language."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To preserve, promote, and make accessible the rich literary heritage of Nepal to readers worldwide, fostering cultural understanding and appreciation for Nepali literature."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become the leading digital platform for Nepali literature, connecting readers with authentic Nepali content and preserving our cultural heritage for future generations."
+    },
+    "stats": {
+      "title": "Our Impact",
+      "books": "50+ Books",
+      "authors": "30+ Authors",
+      "readers": "Readers from many countries"
+    },
+    "team": {
+      "title": "Our Team",
+      "members": {
+        "himal": {
+          "name": "Himal Pandey",
+          "role": "Founder & Developer",
+          "description": "Passionate about technology and Nepali literature, Himal leads our development team in creating innovative digital solutions."
+        },
+        "sita": {
+          "name": "Sita Sharma",
+          "role": "Content Curator",
+          "description": "Expert in Nepali literature with years of experience in content curation and literary analysis."
+        },
+        "ram": {
+          "name": "Ram Thapa",
+          "role": "Community Manager",
+          "description": "Dedicated to building and nurturing our global community of Nepali literature enthusiasts."
+        }
+      }
+    },
+    "cta": {
+      "title": "Join Our Mission",
+      "description": "Are you a Nepali literature specialist or enthusiast? We'd love to hear from you! Share your expertise and help us grow our collection.",
+      "button": "Contact Us"
+    }
+  }
+} 
