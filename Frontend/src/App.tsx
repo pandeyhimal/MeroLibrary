@@ -13,6 +13,7 @@ import TermsOfService from './pages/TermsOfService';
 import Cart from './pages/Cart';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import { ContactFormProvider } from './context/ContactFormContext';
 import { CartProvider } from './context/CartContext';
 
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

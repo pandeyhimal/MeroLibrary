@@ -9,12 +9,18 @@ const Login = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simple mock login logic
-    if (email && password) {
+    // Check registered user from localStorage
+    const userStr = localStorage.getItem('user');
+    if (!userStr) {
+      setError('No user registered. Please register first.');
+      return;
+    }
+    const user = JSON.parse(userStr);
+    if (user.email === email && user.password === password) {
       localStorage.setItem('isLoggedIn', 'true');
       navigate('/');
     } else {
-      setError('Please enter both email and password.');
+      setError('Invalid email or password.');
     }
   };
 
@@ -53,6 +59,10 @@ const Login = () => {
             Login
           </button>
         </form>
+        <div className="mt-4 text-center">
+          <span>Don't have an account? </span>
+          <a href="/register" className="text-blue-600 hover:underline">Register</a>
+        </div>
       </div>
     </div>
   );
