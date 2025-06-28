@@ -7,20 +7,25 @@ const Login = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Check registered user from localStorage
-    const userStr = localStorage.getItem('user');
-    if (!userStr) {
-      setError('No user registered. Please register first.');
-      return;
-    }
-    const user = JSON.parse(userStr);
-    if (user.email === email && user.password === password) {
-      localStorage.setItem('isLoggedIn', 'true');
-      navigate('/');
-    } else {
-      setError('Invalid email or password.');
+    setError('');
+    try {
+      const res = await fetch('http://localhost:5000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.message || 'Login failed.');
+      } else {
+        localStorage.setItem('token', data.token); // Save JWT for auth
+        localStorage.setItem('isLoggedIn', 'true');
+        navigate('/');
+      }
+    } catch (err) {
+      setError('Server error. Please try again later.');
     }
   };
 

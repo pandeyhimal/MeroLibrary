@@ -12,8 +12,10 @@ const Register = () => {
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
+    setSuccess('');
     if (!name || !email || !password || !contact || !address || !profession) {
       setError('Please fill all fields.');
       return;
@@ -22,10 +24,22 @@ const Register = () => {
       setError('Contact number must be exactly 10 digits.');
       return;
     }
-    // Mock: Save user to localStorage (for demo only)
-    localStorage.setItem('user', JSON.stringify({ name, email, password, contact, address, profession }));
-    setSuccess('Registration successful! Please login.');
-    setTimeout(() => navigate('/login'), 1500);
+    try {
+      const res = await fetch('http://localhost:5000/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password, contact, address, profession }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.message || 'Registration failed.');
+      } else {
+        setSuccess('Registration successful! Please login.');
+        setTimeout(() => navigate('/login'), 1500);
+      }
+    } catch (err) {
+      setError('Server error. Please try again later.');
+    }
   };
 
   return (

@@ -205,6 +205,9 @@ function Header() {
                 </Link>
               </li>
               <li>
+                <LanguageToggle />
+              </li>
+              <li>
                 {isLoggedIn ? (
                   <button
                     onClick={handleLogout}
@@ -220,9 +223,6 @@ function Header() {
                     Login
                   </Link>
                 )}
-              </li>
-              <li>
-                <LanguageToggle />
               </li>
             </ul>
           </nav>

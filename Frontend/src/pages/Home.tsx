@@ -194,223 +194,108 @@ function Home() {
                 </div>
             </div>
 
-            {/* Why Mero Library Section */}
-            <div className="py-20 bg-gray-50">
+            {/* Featured Books Section - Real Book Feel */}
+            <div className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-6xl mx-auto">
-                        {/* Interactive Open Book Design */}
-                        <div 
-                            className="relative cursor-pointer"
-                            onMouseEnter={() => setIsBookOpen(true)}
-                            onMouseLeave={() => setIsBookOpen(false)}
-                        >
-                            {/* Book Spine */}
-                            <div className="absolute left-1/2 top-0 bottom-0 w-8 bg-gradient-to-b from-gray-700 via-gray-600 to-gray-700 transform -translate-x-1/2 z-10 rounded-sm shadow-lg"></div>
-                            
-                            {/* Open Book Container */}
-                            <div className={`flex flex-col md:flex-row bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-gray-200 transition-all duration-1000 ease-in-out transform ${isBookOpen ? 'scale-105' : 'scale-100'}`}>
-                                
-                                {/* Left Page - Pictures */}
-                                <div className="md:w-1/2 bg-gradient-to-br from-blue-50 to-indigo-100 p-8 md:p-12 relative">
-                                    {/* Page Curl Effect */}
-                                    <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-gray-200 to-transparent"></div>
-                                    
-                                    {/* Page Number */}
-                                    <div className="absolute bottom-4 left-4 text-gray-500 text-sm font-serif">1</div>
-                                    
-                                    {/* Main Image */}
-                                    <div className="mb-8">
-                                        <img 
-                                            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGlnaXRhbCUyMGxpYnJhcnl8ZW58MHx8MHx8fDA%3D"
-                                            alt="Digital Library"
-                                            className="w-full h-64 object-cover rounded-lg shadow-md border-2 border-white"
-                                        />
-                                    </div>
-                                    
-                                    {/* Additional Images Grid */}
-                                    <div className="grid grid-cols-2 gap-4">
-                                        <img 
-                                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
-                                            alt="Reading"
-                                            className="w-full h-24 object-cover rounded-md shadow-sm border border-white"
-                                        />
-                                        <img 
-                                            src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3N8ZW58MHx8MHx8fDA%3D"
-                                            alt="Books"
-                                            className="w-full h-24 object-cover rounded-md shadow-sm border border-white"
-                                        />
-                                        <img 
-                                            src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGlicmFyeXxlbnwwfHwwfHx8MA%3D%3D"
-                                            alt="Library"
-                                            className="w-full h-24 object-cover rounded-md shadow-sm border border-white"
-                                        />
-                                        <img 
-                                            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGlnaXRhbCUyMGxpYnJhcnl8ZW58MHx8MHx8fDA%3D"
-                                            alt="Digital"
-                                            className="w-full h-24 object-cover rounded-md shadow-sm border border-white"
-                                        />
-                                    </div>
+                    <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 drop-shadow-lg">Featured Books</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 justify-items-center">
+                        {books.map((book, idx) => (
+                            <div
+                                key={book.title}
+                                className="relative group w-[180px] h-[270px] flex flex-col items-center cursor-pointer"
+                                style={{ perspective: '1200px' }}
+                            >
+                                {/* Book shadow */}
+                                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-4/5 h-6 bg-black/20 rounded-full blur-md z-0" />
+                                {/* Book cover */}
+                                <div
+                                    className="relative z-10 w-full h-full rounded-lg shadow-2xl group-hover:shadow-3xl transition-shadow duration-300"
+                                    style={{
+                                        transform: 'rotateY(-8deg) rotateZ(-2deg)',
+                                        boxShadow: '0 8px 32px 0 rgba(60,60,60,0.25), 0 1.5px 0 #bfa76a',
+                                        background: '#fff',
+                                        borderLeft: '8px solid #bfa76a', // spine
+                                        borderRadius: '0.5rem',
+                                    }}
+                                >
+                                    <img
+                                        src={book.url}
+                                        alt={book.title}
+                                        className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                                        style={{ borderTopLeftRadius: '0.5rem', borderBottomLeftRadius: '0.5rem' }}
+                                    />
+                                    {/* Book spine effect */}
+                                    <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-r from-yellow-900/80 to-yellow-200/40 rounded-l-lg" />
+                                    {/* Book open effect on hover */}
+                                    <div
+                                        className="absolute inset-0 rounded-lg pointer-events-none"
+                                        style={{
+                                            boxShadow: 'inset 0 0 18px 0 #fff8, 0 0 0 2px #bfa76a',
+                                            opacity: 0.7,
+                                            transition: 'opacity 0.3s',
+                                        }}
+                                    />
                                 </div>
-
-                                {/* Right Page - Content */}
-                                <div className="md:w-1/2 bg-white p-8 md:p-12 relative">
-                                    {/* Page Curl Effect */}
-                                    <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-gray-200 to-transparent"></div>
-                                    
-                                    {/* Page Number */}
-                                    <div className="absolute bottom-4 right-4 text-gray-500 text-sm font-serif">2</div>
-                                    
-                                    <div className="max-w-lg">
-                                        <h2 className="text-3xl font-bold mb-6 text-gray-800 font-serif">📚 Why Mero Library?</h2>
-                                        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                                            Mero Library is Nepal's digital gateway to the world of books — designed to make reading more accessible, convenient, and culturally relevant.
-                                        </p>
-
-                                        <h3 className="text-2xl font-semibold mb-4 text-gray-800">✨ What We Offer:</h3>
-                                        <p className="text-gray-700 mb-6 leading-relaxed">
-                                            Whether you're at home, in your room, or on the go — Mero Library lets you explore a wide range of Nepali books from anywhere with an internet connection. No need to visit a physical library.
-                                        </p>
-
-                                        <div className="space-y-4 mb-6">
-                                            <h4 className="text-xl font-semibold mb-4 text-gray-800">We bring you:</h4>
-                                            <ul className="space-y-3">
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">📘</span>
-                                                    <span className="text-gray-700">Verified information about Nepali novels, poems, biographies, and more</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🌐</span>
-                                                    <span className="text-gray-700">Easy online access anytime, anywhere</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">📱</span>
-                                                    <span className="text-gray-700">Mobile and desktop-friendly platform</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🔖</span>
-                                                    <span className="text-gray-700">Personalized reading experience</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <p className="text-gray-700 italic text-sm">
-                                            And coming soon: a free book rental service to get real books delivered to your doorstep.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Additional Pages - Our Mission */}
-                                <div className={`md:w-1/2 bg-gradient-to-br from-green-50 to-emerald-100 p-8 md:p-12 relative transition-all duration-700 ease-in-out transform ${pageTurned >= 1 ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-                                    {/* Page Curl Effect */}
-                                    <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-gray-200 to-transparent"></div>
-                                    
-                                    {/* Page Number */}
-                                    <div className="absolute bottom-4 right-4 text-gray-500 text-sm font-serif">3</div>
-                                    
-                                    <div className="max-w-lg">
-                                        <h2 className="text-3xl font-bold mb-6 text-gray-800 font-serif">🎯 Our Mission</h2>
-                                        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                                            To democratize access to Nepali literature and create a vibrant digital ecosystem that preserves, promotes, and celebrates our rich literary heritage.
-                                        </p>
-
-                                        <h3 className="text-2xl font-semibold mb-4 text-gray-800">🌟 What Drives Us:</h3>
-                                        <p className="text-gray-700 mb-6 leading-relaxed">
-                                            We believe that every Nepali deserves access to quality literature, regardless of their location or economic status. Our mission is to bridge the gap between readers and Nepali books.
-                                        </p>
-
-                                        <div className="space-y-4 mb-6">
-                                            <h4 className="text-xl font-semibold mb-4 text-gray-800">Our Commitment:</h4>
-                                            <ul className="space-y-3">
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">📖</span>
-                                                    <span className="text-gray-700">Preserve and digitize rare Nepali literary works</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🌍</span>
-                                                    <span className="text-gray-700">Make Nepali literature accessible globally</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">👥</span>
-                                                    <span className="text-gray-700">Support emerging Nepali authors and poets</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🎓</span>
-                                                    <span className="text-gray-700">Promote literacy and reading culture in Nepal</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <p className="text-gray-700 italic text-sm">
-                                            Together, we're building a future where Nepali literature thrives in the digital age.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Additional Pages - Our Goals */}
-                                <div className={`md:w-1/2 bg-gradient-to-br from-purple-50 to-violet-100 p-8 md:p-12 relative transition-all duration-700 ease-in-out transform ${pageTurned >= 2 ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-                                    {/* Page Curl Effect */}
-                                    <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-gray-200 to-transparent"></div>
-                                    
-                                    {/* Page Number */}
-                                    <div className="absolute bottom-4 right-4 text-gray-500 text-sm font-serif">4</div>
-                                    
-                                    <div className="max-w-lg">
-                                        <h2 className="text-3xl font-bold mb-6 text-gray-800 font-serif">🎯 Our Goals</h2>
-                                        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                                            We envision a future where Nepali literature reaches every corner of the world, inspiring generations and preserving our cultural identity.
-                                        </p>
-
-                                        <h3 className="text-2xl font-semibold mb-4 text-gray-800">🚀 Short-term Goals (2024-2025):</h3>
-                                        <div className="space-y-4 mb-6">
-                                            <ul className="space-y-3">
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">📚</span>
-                                                    <span className="text-gray-700">Digitize 10,000+ Nepali books and manuscripts</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">📱</span>
-                                                    <span className="text-gray-700">Launch mobile app for better accessibility</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🌐</span>
-                                                    <span className="text-gray-700">Reach 100,000+ active users worldwide</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <h3 className="text-2xl font-semibold mb-4 text-gray-800">🌟 Long-term Vision (2025-2030):</h3>
-                                        <div className="space-y-4 mb-6">
-                                            <ul className="space-y-3">
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🏛️</span>
-                                                    <span className="text-gray-700">Establish digital archive of all Nepali literature</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🤝</span>
-                                                    <span className="text-gray-700">Partner with international libraries and institutions</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🎨</span>
-                                                    <span className="text-gray-700">Create multimedia content for Nepali literature</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="text-2xl">🌍</span>
-                                                    <span className="text-gray-700">Make Nepali literature available in multiple languages</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <p className="text-gray-700 italic text-sm">
-                                            Join us in this journey to preserve and promote the rich literary heritage of Nepal.
-                                        </p>
-                                    </div>
+                                {/* Book info */}
+                                <div className="mt-4 text-center">
+                                    <h3 className="font-bold text-lg text-gray-900 leading-tight drop-shadow-sm">
+                                        {book.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-600 mt-1 italic">by {book.title === 'Muna Madan' ? 'Madhav Prasad Ghimire' : book.title === 'Siris ko Phool' ? 'Parijat' : 'Nepali Author'}</p>
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
-                            {/* Hover Instruction */}
-                            <div className={`absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-center transition-opacity duration-500 ${isBookOpen ? 'opacity-0' : 'opacity-100'}`}>
-                                <p className="text-gray-600 text-sm font-medium">Hover to turn pages one by one 📖</p>
-                            </div>
+            {/* Why Mero Library, Mission, Vision - Modern Clean Layout */}
+            <div className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+                        {/* Why Mero Library */}
+                        <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+                            <div className="text-4xl mb-4">📚</div>
+                            <h2 className="text-2xl font-bold mb-4 text-gray-800">Why Mero Library?</h2>
+                            <p className="text-gray-700 mb-4">
+                                Mero Library is Nepal's digital gateway to the world of books — designed to make reading more accessible, convenient, and culturally relevant.
+                            </p>
+                            <ul className="text-left space-y-2 text-gray-600 text-sm">
+                                <li><span className="mr-2">📘</span>Verified information about Nepali novels, poems, biographies, and more</li>
+                                <li><span className="mr-2">🌐</span>Easy online access anytime, anywhere</li>
+                                <li><span className="mr-2">📱</span>Mobile and desktop-friendly platform</li>
+                                <li><span className="mr-2">🔖</span>Personalized reading experience</li>
+                            </ul>
+                            <p className="text-gray-500 italic text-xs mt-4">And coming soon: a free book rental service to get real books delivered to your doorstep.</p>
+                        </div>
+                        {/* Our Mission */}
+                        <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+                            <div className="text-4xl mb-4">🎯</div>
+                            <h2 className="text-2xl font-bold mb-4 text-gray-800">Our Mission</h2>
+                            <p className="text-gray-700 mb-4">
+                                To democratize access to Nepali literature and create a vibrant digital ecosystem that preserves, promotes, and celebrates our rich literary heritage.
+                            </p>
+                            <ul className="text-left space-y-2 text-gray-600 text-sm">
+                                <li><span className="mr-2">📖</span>Preserve and digitize rare Nepali literary works</li>
+                                <li><span className="mr-2">🌍</span>Make Nepali literature accessible globally</li>
+                                <li><span className="mr-2">👥</span>Support emerging Nepali authors and poets</li>
+                                <li><span className="mr-2">🎓</span>Promote literacy and reading culture in Nepal</li>
+                            </ul>
+                            <p className="text-gray-500 italic text-xs mt-4">Together, we're building a future where Nepali literature thrives in the digital age.</p>
+                        </div>
+                        {/* Our Vision */}
+                        <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+                            <div className="text-4xl mb-4">🌈</div>
+                            <h2 className="text-2xl font-bold mb-4 text-gray-800">Our Vision</h2>
+                            <p className="text-gray-700 mb-4">
+                                To inspire a new generation of readers and writers, and to make Nepali literature a global phenomenon.
+                            </p>
+                            <ul className="text-left space-y-2 text-gray-600 text-sm">
+                                <li><span className="mr-2">📚</span>A digital library in every Nepali home</li>
+                                <li><span className="mr-2">🌏</span>Nepali books read and loved worldwide</li>
+                                <li><span className="mr-2">🤝</span>A thriving community of readers and writers</li>
+                            </ul>
+                            <p className="text-gray-500 italic text-xs mt-4">Join us on this journey to make Nepali literature shine on the world stage.</p>
                         </div>
                     </div>
                 </div>

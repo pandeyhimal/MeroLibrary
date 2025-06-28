@@ -286,6 +286,43 @@
       "subtitle": "Nepal's Premier Digital Library Platform",
       "description": "Discover the rich heritage of Nepali literature through our extensive collection of books, authors, and literary content. Join thousands of readers worldwide in exploring the beauty of Nepali culture and language."
     },
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Mero Library started as a small dream. We saw that Nepal has a rich literary heritage, but it was not easily accessible to modern readers. So, we decided to build this digital platform.",
+      "paragraph2": "At first, it was a small project. We began from home, scanning a few books and putting them online. But many readers loved it, and our project grew.",
+      "paragraph3": "Today, we have 50+ books, information on 30+ authors, and readers from many countries using our site. This is a big achievement for us."
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "bookCollection": {
+        "title": "Book Collection",
+        "description": "We collect a wide range of Nepali books—from old classics to modern works. All these books are available to read online."
+      },
+      "authorInfo": {
+        "title": "Author Information",
+        "description": "We provide detailed information about famous Nepali authors, their works, and their contributions."
+      },
+      "globalAccess": {
+        "title": "Global Access",
+        "description": "We make Nepali literature accessible to Nepali speakers and learners all over the world."
+      },
+      "community": {
+        "title": "Community Building",
+        "description": "We are building a community of Nepali literature lovers where everyone can share their experiences."
+      }
+    },
+    "future": {
+      "title": "Building the Future of Reading!",
+      "paragraph1": "Currently, we have 50+ books and information on 30+ Nepali authors, and our reader community is growing in many countries. We are excited about the journey ahead and hope our platform will reach even more literature lovers.",
+      "paragraph2": "Unlike traditional models focused on selling books, our main goal is to start a book rental service—like a physical library, but digitally accessible at your doorstep.",
+      "paragraph3": "We also warmly welcome book donations. If you have already-read books and want to share them with others, you can contribute to this growing literary movement.",
+      "tagline": "Let's make Nepali literature accessible to everyone—anytime, anywhere.",
+      "progress": {
+        "title": "Our Current Progress",
+        "books": "Books Collected",
+        "authors": "Nepali Authors"
+      }
+    },
     "mission": {
       "title": "Our Mission",
       "description": "To preserve, promote, and make accessible the rich literary heritage of Nepal to readers worldwide, fostering cultural understanding and appreciation for Nepali literature."
@@ -302,28 +339,30 @@
     },
     "team": {
       "title": "Our Team",
-      "members": {
         "himal": {
           "name": "Himal Pandey",
-          "role": "Founder & Developer",
+          "position": "Founder & Developer",
           "description": "Passionate about technology and Nepali literature, Himal leads our development team in creating innovative digital solutions."
         },
         "sita": {
-          "name": "Sita Sharma",
-          "role": "Content Curator",
+          "name": "Sita Adhikari",
+          "position": "Content Curator",
           "description": "Expert in Nepali literature with years of experience in content curation and literary analysis."
         },
-        "ram": {
-          "name": "Ram Thapa",
-          "role": "Community Manager",
+        "nabin": {
+          "name": "Nabin Adhikari",
+          "position": "Community Manager",
           "description": "Dedicated to building and nurturing our global community of Nepali literature enthusiasts."
         }
       }
     },
     "cta": {
       "title": "Join Our Mission",
-      "description": "Are you a Nepali literature specialist or enthusiast? We'd love to hear from you! Share your expertise and help us grow our collection.",
-      "button": "Contact Us"
+      "description1": "Are you a Nepali literature specialist or enthusiast? We'd love to hear from you! Share your expertise and help us grow our collection.",
+      "description2": "",
+      "description3": "",
+      "browseBooks": "Browse Books",
+      "contactForm": "👉 Contact us directly!"
     }
-  }
+  
 } 
